@@ -15,7 +15,7 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Database.mdf;Integrated Security=True;User Instance=True");
         SqlCommand cmd = new SqlCommand("select  * from tbl_data where username=@username and password=@password", con);
         cmd.Parameters.AddWithValue("@username", TextBox1.Text);
         cmd.Parameters.AddWithValue("password", TextBox2.Text);
